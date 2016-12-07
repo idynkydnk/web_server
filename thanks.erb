@@ -3,7 +3,7 @@
     <h1>Thanks for Posting!</h1>
     <h2>Here's what we got from you:</h2>
     <ul>
-      <%= yield %>
+      <li><%= params["viking"]["name"] %> - <%= params["viking"]["email"] %></li>
     </ul>
   </body>
 </html>

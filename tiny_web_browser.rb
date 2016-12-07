@@ -15,12 +15,11 @@ elsif method == "POST"
   name = gets.chomp
   puts "Email?"
   email = gets.chomp
-  viking = { :name => name, :email => email }
-  viking.to_json
-  content_length = viking.length
+  viking = { :viking => { :name => name, :email => email }}
+  viking_json = viking.to_json
+  content_length = viking_json.length
   puts content_length
-  puts viking
-  request = "POST #{viking} HTTP/1.0\r\n\r\n" 
+  request = "POST #{viking_json} HTTP/1.0\r\n\r\n" 
 end
 
 
